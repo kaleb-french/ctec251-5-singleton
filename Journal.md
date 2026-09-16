@@ -9,3 +9,6 @@ The eagar is great if it is used often otherwise it's hanging out in memory for 
 
 Phase 3-
 Whith the dependencies not shown by the constructor, they are hidden in such a way that anyone using the class would have to dig through the code to find out what they rely on. Hidden dependencies are things that the class or subsystem relies on but may not be clear or upfront, might be tucked deep in the code.
+
+Phase 4-
+It seems useful gave quick access to data that was needed and shared between subsystems. It has issues with being able to be accessed basically everywhere, which can lead to some unkowns as things scale. I am curious with using something like this to bootstrap and larger engine from a config file then being nixed when things get going.
