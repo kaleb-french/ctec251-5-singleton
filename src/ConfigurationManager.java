@@ -1,6 +1,6 @@
 public class ConfigurationManager {
 
-    private static ConfigurationManager instance = new ConfigurationManager();
+    private static ConfigurationManager instance = null;
 
     private String screenRes = "1920,1080";
 
@@ -9,9 +9,12 @@ public class ConfigurationManager {
     private double brightness = .5;
 
     private ConfigurationManager(){
-
+        System.out.println("I'm a real boy!");
     }
-    public static ConfigurationManager getInstance(){
+    public static  synchronized ConfigurationManager getInstance(){
+        if(instance == null){
+           instance = new ConfigurationManager();
+        }
         return instance;
     }
     public String getScreenRes(){
